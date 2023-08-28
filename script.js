@@ -63,28 +63,22 @@ nextBtn.addEventListener('click', () => {
   // const landLinePhonePattern = /\s^\(?(0[1-6]{1}[0-9]{3}\)?[0-9]{6})\s*/;
   // console.log(mobilePhonePattern.test(numberField.value))
 
-
-
-  if(!numberField.value) {
-    noErrMessage.textContent = 'This field is required';
-    numberField.style.border = '1px solid hsl(354, 84%, 57%)'
-  }
-  // else if(numberField.value.length === 11) {
-  //   console.log('done')
-  // }else {
-  //   noErrMessage.textContent = '';
-  //   numberField.style.border = '1px solid hsl(229, 24%, 87%)';
-  // }
-
   if(numberField.value && numberField.value.length === 11 && mobilePhonePattern1 || mobilePhonePattern2 || mobilePhonePattern3) {
     console.log('okay')
     noErrMessage.textContent = '';
     numberField.style.border = '1px solid hsl(229, 24%, 87%)';
   }
 
+  if(!numberField.value) {
+    noErrMessage.textContent = 'This field is required';
+    numberField.style.border = '1px solid hsl(354, 84%, 57%)'
+  }
+
+
+
   // IF ALL VALUE IS INPUTED
   // If all input value field is filled move the step No. 2
-  if(nameField.value && mailField.value && numberField.value) {
+  // if(nameField.value && mailField.value && numberField.value) {
 
-  }
+  // }
 })

@@ -15,29 +15,30 @@ let nameErrMessage = document.querySelector('.name-err-message');
   const inView2 = document.querySelector('.in-view--2');
   const inView3 = document.querySelector('.in-view--3');
 
+//SWITCHING PLAN TOGGLE BTN
+  const switchBtn = document.querySelector('.switch');
+  const switchToggle = document.querySelector('.switch-toggle');
+  const monthPlan = document.querySelector('.month-plan');
+  const yearPlan = document.querySelector('.year-plan');
+  const monthAddOns = document.querySelector('.month-adds-on');
+  const yearAddOns = document.querySelector('.year-adds-on');
+  const finishMonth = document.querySelector('.month-finish');
+  const finishYear = document.querySelector('.year-finish');
+
 
 // WORKING WITH NAME FILED INPUT
 const hasNumber = /\d/.test(nameField.value);
 
-const workingWithName = function() {
-
-  
-
-
-}
-
-// WORKING WITH EMAIL FIELD INPUT
 
 
 // WORKING WITH MOBILE NUMBER
- 
-
 // WORKING WITH FILL PAGE
 // Move to next step if;
 // All input field is field correctly
 // Move to the next step
 // change active icon to 2
 //Adding an eventListener to Next Step
+
 nextBtn.addEventListener('click', (e) => {
   //NAME-FIELD
   if(!nameField.value) {
@@ -90,7 +91,6 @@ nextBtn.addEventListener('click', (e) => {
   const mobilePhonePattern1 = /^(\+234\s?7\d{4}|\(?070\d{2}\)?)\s?\d{3}\s?\d{3}$/;
   const mobilePhonePattern2 = /^(\+234\s?7\d{4}|\(?081\d{2}\)?)\s?\d{3}\s?\d{3}$/;
   const mobilePhonePattern3 = /^(\+234\s?7\d{3}|\(?090\d{2}\)?)\s?\d{3}\s?\d{3}$/;
-  const mobilePhonePattern4 = /^(\+234\s?7\d{3}|\(?090\d{2}\)?)\s?\d{3}\s?\d{3}$/;
 
   if(!numberField.value) {
     console.log('no no');
@@ -108,7 +108,7 @@ nextBtn.addEventListener('click', (e) => {
   // IF ALL VALUE IS INPUTED
   // If all input value field is filled move the step No. 2
 
-  if(nameField.value.includes(' ') && mailField.value.match(emailPattern)  && mobilePhonePattern1.test(numberField.value) ||mobilePhonePattern2.test(numberField.value) || mobilePhonePattern3.test(numberField.value)) {
+  if(nameField.value.includes(' ') && mailField.value.match(emailPattern)  && mobilePhonePattern1.test(numberField.value)) {
     inView0.classList.remove('active-view')
     inView1.classList.add('active-view')
     console.log('yep')
@@ -150,17 +150,9 @@ nextBtn.addEventListener('click', (e) => {
     }
   })
   
-  //SWITCHING PLAN TOGGLE BTN
-  const switchBtn = document.querySelector('.switch');
-  const switchToggle = document.querySelector('.switch-toggle');
-  const monthPlan = document.querySelector('.month-plan');
-  const yearPlan = document.querySelector('.year-plan');
-  const monthAddOns = document.querySelector('.month-adds-on');
-  const yearAddOns = document.querySelector('.year-adds-on');
-  const finishMonth = document.querySelector('.month-finish');
-  const finishYear = document.querySelector('.year-finish');
 
-  
+
+  // SWITCHING TOGGLES
   switchBtn.addEventListener('click', e =>{
     switchToggle.classList.toggle('active-toggle')
     
@@ -238,6 +230,10 @@ change.addEventListener('click', e => {
   //Activating the Plan page to change plan(optional)
   // inView1.classList.add('active-view');
   // inView3.classList.remove('active-view');
+
+  // CHANGING OF FINISH UP PLAN
+    finishMonth.classList.toggle('active-finish');
+    // finishYear.classList.toggle('active-finish');
 
 })
 

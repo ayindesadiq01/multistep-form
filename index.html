@@ -12,28 +12,28 @@
     <div class="left-container">
       <!--NUMBER ICON-->
       <div class="steps">
-        <span class="step active-step" data-tab="1">1</span>
+        <span class="step active-step" data-tab="0">1</span>
         <div class="step-detail">    
           <p class="step-no">STEP 1</p>
           <p class="step-label">YOUR INFO</p>
         </div>
       </div>
       <div class="steps">
-        <span class="step" data-tab="2">2</span>
+        <span class="step" data-tab="1">2</span>
         <div class="step-detail">
           <p class="step-no">STEP 2</p>
           <p class="step-label">SELECT PLAN</p>
         </div>
       </div>
       <div class="steps">
-        <span class="step" data-tab="3">3</span>
+        <span class="step" data-tab="2">3</span>
         <div class="step-detail">
           <p class="step-no">STEP 3</p>
           <p class="step-label">ADD-ONS</p>
         </div>
       </div>
       <div class="steps">
-        <span class="step" data-tab="4">4</span>
+        <span class="step" data-tab="3">4</span>
         <div class="step-detail">
           <p class="step-no">STEP 4</p>
           <p class="step-label">SUMMARY</p>
@@ -42,241 +42,280 @@
     </div>
     <div class="right-container">
       <!--PERSONAL INFO-->
-      <div class="in-view active-view">
-        <h2 class="heading">Personal info</h2>
-        <p class="info-text">Please provide your name, email, address, and phone number.</p>
-        <form action="fill">
-          <div class="nam-field">
-            <div class="label-err">
-              <label for="name">Name</label>
-              <span class="name-err-message"></span>
+      <div class="in-view  in-view--0 active-view" id="fill-page">
+
+        <div class="text-box">
+          <h2 class="heading">Personal info</h2>
+          <p class="info-text">Please provide your name, email, address, and phone number.</p>
+          <form action="fill">
+            <div class="nam-field">
+              <div class="label-err">
+                <label for="name">Name</label>
+                <span class="name-err-message"></span>
+              </div>
+              <input type="text" name="name" id="name" class="name-field" placeholder="e.g. Stephen King" required>
             </div>
-            <input type="text" name="name" id="name" class="name-field" placeholder="e.g. Stephen King" required>
-          </div>
-    
-          <div class="mail-field">
-            <div class="label-err">
-              <label for="email">Email Address</label>
-              <span class="mail-err-message"></span>
+          
+            <div class="mail-field">
+              <div class="label-err">
+                <label for="email">Email Address</label>
+                <span class="mail-err-message"></span>
+              </div>
+              <input type="email" name="email" id="email" class="email-field" placeholder="e.g. stephenking@lorem.com" required>
             </div>
-            <input type="email" name="email" id="email" class="email-field" placeholder="e.g. stephenking@lorem.com" required>
-          </div>
-    
-          <div class="no-field">
-            <div class="label-err">
-              <label for="name">Phone Number</label>
-              <span class="no-err-message"></span>
+          
+            <div class="no-field">
+              <div class="label-err">
+                <label for="name">Phone Number</label>
+                <span class="no-err-message"></span>
+              </div>
+              <input type="text" name="name" id="name" class="number-field" placeholder="e.g. +1 234 567 890" required>
             </div>
-            <input type="text" name="name" id="name" class="number-field" placeholder="e.g. +1 234 567 890" required>
-          </div>
-        </form>
+          </form>
+        </div>
+        
+
+        <!-- NEXT AND PREV BUTTON -->
+        <div class="nxt-btn" data-btn="0">
+          <div></div>
+          <a href="#plan-change" class="personal-info-btn next-btn btn">Next Step</a>
+        </div>
+
       </div>
       
       <!--SELECT YOUR PLAN-->
-      <div class="in-view" id="plan-change">
-        <h2 class="heading">Select your plan</h2>
-        <p class="info-text">You have the option of monthly or yearly billing.</p>
-        <div class="select-plan">
-          <!--MONTHLY PLAN-->
-          <div class="toggle-plan active-toggle-plan">
-            <div class="plan plan--1 active-plan">
-              <img src="./assets/images/icon-arcade.svg" alt="image icon" class="plan-icon">
-              <div class="plan-details">
-                <p class="plan-heading">Arcade</p>
-                <p class="plan-price">$9/mo</p>
+      <div class="in-view in-view--1" id="plan-change">
+        <div class="text-box">
+          <h2 class="heading">Select your plan</h2>
+          <p class="info-text">You have the option of monthly or yearly billing.</p>
+          <div class="select-plan">
+            <!--MONTHLY PLAN-->
+            <div class="toggle-plan active-toggle-plan month-plan">
+              <div class="plan plan--1 active-plan">
+                <img src="./assets/images/icon-arcade.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Arcade</p>
+                  <p class="plan-price">$9/mo</p>
+                </div>
+              </div>
+          
+              <div class="plan plan--2 ">
+                <img src="./assets/images/icon-advanced.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Advanced</p>
+                  <p class="plan-price">$12/mo</p>
+                </div>
+              </div>
+          
+              <div class="plan plan--3">
+                <img src="./assets/images/icon-pro.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Pro</p>
+                  <p class="plan-price">$15/mo</p>
+                </div>
               </div>
             </div>
-            
-            <div class="plan plan--2 ">
-              <img src="./assets/images/icon-advanced.svg" alt="image icon" class="plan-icon">
-              <div class="plan-details">
-                <p class="plan-heading">Advanced</p>
-                <p class="plan-price">$12/mo</p>
+            <!--YEARLY PLAN-->
+            <div class="toggle-plan year-plan">
+              <div class="plan plan--1 active-plan">
+                <img src="./assets/images/icon-arcade.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Arcade</p>
+                  <p class="plan-price">$90/yr</p>
+                  <p class="sub-bonus">2 months free</p>
+                </div>
+              </div>
+              <div class="plan plan--2 ">
+                <img src="./assets/images/icon-advanced.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Advanced</p>
+                  <p class="plan-price">$120/yr</p>
+                  <p class="sub-bonus">2 months free</p>
+                </div>
+              </div>
+              <div class="plan plan--3">
+                <img src="./assets/images/icon-pro.svg" alt="image icon" class="plan-icon">
+                <div class="plan-details">
+                  <p class="plan-heading">Pro</p>
+                  <p class="plan-price">$150/yr</p>
+                  <p class="sub-bonus">2 months free</p>
+                </div>
               </div>
             </div>
-            
-            <div class="plan plan--3">
-              <img src="./assets/images/icon-pro.svg" alt="image icon" class="plan-icon">
-              <div class="plan-details">
-                <p class="plan-heading">Pro</p>
-                <p class="plan-price">$15/mo</p>
+          
+            <!--MONTHLY/ YEARLY-->
+            <div class="subscription-method">
+              <span>Monthly</span>
+              <div class="switch">
+                <div class="switch-toggle"></div>
               </div>
+              <span>Yearly</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- NEXT AND PREV BUTTON -->
+        <div class="nxt-btn" data-btn="0">
+          <a href="#fill-page" class="prev-btn to-fill-page btn">Go Back</a>
+          <a href="#add-onss" class="next-btn plan-btn btn">Next Step</a>
+        </div>
+      </div>
+      
+      <!-- PICK ADD-ONS -->
+      <div class="in-view in-view--2" id="adds-onss">
+        <div class="text-box">
+          <h2 class="heading">Pick add-ons</h2>
+          <p class="info-text">Add-ons help enhance your gaming experience.</p>
+          
+          <!--MONTHLY ADD ONS-->
+          <div class="add-ons active-add-ons month-adds-on">
+          
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Online Service</p>
+                <p class="add-on-info">Access to multiplayer games</p>
+              </div>
+          
+              <div class="add-on-price">+$1/mo</div>
+            </div>
+          
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Larger Storage</p>
+                <p class="add-on-info">Extra 1TB of cloud save</p>
+              </div>
+          
+              <div class="add-on-price">+$2/mo</div>
+            </div>
+          
+            <div class="add-on">
+              <div class="add-on-icon">
+                <input type="checkbox" class="check-box">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Customizable profile</p>
+                <p class="add-on-info">Custom theme on your profile.</p>
+              </div>
+          
+              <div class="add-on-price">+$2/mo</div>
+            </div>
+          </div>
+          
+          <!--YEARLY ADD ONS-->
+          <div class="add-ons year-adds-on">
+          
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Online Service</p>
+                <p class="add-on-info">Access to multiplayer games</p>
+              </div>
+          
+              <div class="add-on-price">+$10/yr</div>
+          
+            </div>
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Larger Storage</p>
+                <p class="add-on-info">Extra 1TB of cloud save</p>
+              </div>
+          
+              <div class="add-on-price">+$20/yr</div>
+            </div>
+          
+            <div class="add-on">
+              <div class="add-on-icon">
+                <input type="checkbox" class="check-box">
+              </div>
+          
+              <div class="add-ons-details">
+                <p class="add-on-heading">Customizable profile</p>
+                <p class="add-on-info">Custom theme on your profile.</p>
+              </div>
+          
+              <div class="add-on-price">+$20/yr</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- NEXT AND PREV BUTTON -->
+        <div class="nxt-btn" data-btn="0">
+          <a href="#plan-change" class="prev-btn prev-plan-page btn">Go Back</a>
+          <a href="#finish-up" class="next-btn adds-btn btn">Next Step</a>
+        </div>
+        
+      </div>
+
+      <!--FINISHING UP-->
+      <div class="in-view in-view--3" id="finish-up">
+        <div class="text-box">
+          <h2 class="heading">Finishing up</h2>
+          <p class="info-text">Double-check every thing looks OK before confirming.</p>
+      
+          <!--MONTH FINISH-->
+          <div class="finish-up month-finish active-finish">
+            <div class="confirm-plan c-plan">
+              <p class="final-plan">Arcade(Monthly)</p>
+              <p class="final-amount">$9/mo</p>
+              <a href="#" class="change">Change</a>
+            </div>
+            <div class="confirm-add-on">
+              <p class="confirm-detail">Online service</p>
+              <p class="confirm-charges">$1/mo</p>
+              <p class="confirm-detail">Larger storage</p>
+              <p class="confirm-charges">$2/mo</p>
             </div>
           </div>
 
-     <!--YEARLY PLAN-->
-     <div class="toggle-plan">
-      <div class="plan plan--1 active-plan">
-       <img src="./assets/images/icon-arcade.svg" alt="image icon" class="plan-icon">
-       <div class="plan-details">
-        <p class="plan-heading">Arcade</p>
-        <p class="plan-price">$90/yr</p>
-        <p class="sub-bonus">2 months free</p>
-       </div>
-      </div>
-     
-      <div class="plan plan--2 ">
-       <img src="./assets/images/icon-advanced.svg" alt="image icon" class="plan-icon">
-       <div class="plan-details">
-        <p class="plan-heading">Advanced</p>
-        <p class="plan-price">$12/mo</p>
-        <p class="sub-bonus">2 months free</p>
-       </div>
-      </div>
-     
-      <div class="plan plan--3">
-       <img src="./assets/images/icon-pro.svg" alt="image icon" class="plan-icon">
-       <div class="plan-details">
-        <p class="plan-heading">Pro</p>
-        <p class="plan-price">$15/mo</p>
-        <p class="sub-bonus">2 months free</p>
-       </div>
-      </div>
-     </div>
-
-     
-
-     <!--MONTHLY/ YEARLY-->
-     <div class="subscription-method">
-      <span>Monthly</span>
-      <div class="switch">
-       <div class="switch-toggle"></div>
-      </div>
-      <span>Yearly</span>
-     </div>
-    </div>
-   </div>
-
-   <!-- PICK ADD-ONS -->
-   <div class="in-view">
-    <h2 class="heading">Pick add-ons</h2>
-    <p class="info-text">Add-ons help enhance your gaming experience.</p>
-    
-    <!--MONTHLY ADD ONS-->
-    <div class="add-ons active-add-ons">
-    
-     <div class="add-on">
-      <div class="add-on-icon">
-       <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
-      </div>
-    
-      <div class="add-ons-details">
-       <p class="add-on-heading">Online Service</p>
-       <p class="add-on-info">Access to multiplayer games</p>
-      </div>
-    
-      <div class="add-on-price">+$1/mo</div>
-     </div>
-    
-     <div class="add-on">
-      <div class="add-on-icon">
-       <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
-      </div>
-    
-      <div class="add-ons-details">
-       <p class="add-on-heading">Larger Storage</p>
-       <p class="add-on-info">Extra 1TB of cloud save</p>
-      </div>
-    
-      <div class="add-on-price">+$2/mo</div>
-     </div>
-    
-     <div class="add-on">
-      <div class="add-on-icon">
-       <input type="checkbox" class="check-box">
-      </div>
-    
-      <div class="add-ons-details">
-       <p class="add-on-heading">Customizable profile</p>
-       <p class="add-on-info">Custom theme on your profile.</p>
-      </div>
-    
-      <div class="add-on-price">+$2/mo</div>
-     </div>
-    </div>
-
-
-    <!--YEARLY ADD ONS-->
-    <div class="add-ons">
-
-     <div class="add-on">
-      <div class="add-on-icon">
-       <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
-      </div>
+          <!--YEAR FINISH-->
+          <div class="finish-up year-finish">
+            <div class="confirm-plan c-plan">
+              <p class="final-plan">Arcade(Yearly)</p>
+              <p class="final-amount">$90/yr</p>
+              <a href="#" class="change">Change</a>
+            </div>
+            <div class="confirm-add-on">
+              <p class="confirm-detail">Online service</p>
+              <p class="confirm-charges">$10/yr</p>
+              <p class="confirm-detail">Larger storage</p>
+              <p class="confirm-charges">$20/yr</p>
+            </div>
+          </div>
       
-      <div class="add-ons-details">
-       <p class="add-on-heading">Online Service</p>
-       <p class="add-on-info">Access to multiplayer games</p>
+          <div class="total">
+            <p class="total-mo-yr">Total(per month)</p>
+            <p class="total-amount">$120/yr</p>
+          </div>
+        </div>
+      
+        <!-- NEXT AND PREV BUTTON -->
+        <div class="nxt-btn" data-btn="0">
+          <a href="#plan-change" class="prev-btn prev-plan-page btn">Go Back</a>
+          <a href="#finish-up" class="next-btn adds-btn btn">Confirm</a>
+        </div>
+      
       </div>
-
-      <div class="add-on-price">+$10/yr</div>
-     </div>
-
-     <div class="add-on">
-      <div class="add-on-icon">
-       <img src="./assets/images/icon-checkmark.svg" alt="image icon" class="add-icon">
-      </div>
-     
-      <div class="add-ons-details">
-       <p class="add-on-heading">Larger Storage</p>
-       <p class="add-on-info">Extra 1TB of cloud save</p>
-      </div>
-     
-      <div class="add-on-price">+$20/yr</div>
-     </div>
-
-     <div class="add-on">
-      <div class="add-on-icon">
-       <input type="checkbox" class="check-box">
-      </div>
-     
-      <div class="add-ons-details">
-       <p class="add-on-heading">Customizable profile</p>
-       <p class="add-on-info">Custom theme on your profile.</p>
-      </div>
-     
-      <div class="add-on-price">+$20/yr</div>
-     </div>
     </div>
-   </div>
 
-   <!--FINISHING UP-->
-   <div class="in-view">
-    <h2 class="heading">Finishing up</h2>
-    <p class="info-text">Double-check every thing looks OK before confirming.</p>
     
-    <div class="finish-up">
-     <div class="confirm-plan">
-      <p class="final-plan">Arcade(Monthly)</p>
-      <p class="final-amount">$9/mo</p>
-      <a href="#plan-change">Change</a>
-     </div>
-     <div class="confirm-add-on">
-      <p class="confirm-detail">Online service</p>
-      <p class="confirm-charges">$1/mo</p>
-      <p class="confirm-detail">Larger storage</p>
-      <p class="confirm-charges">$2/mo</p>
-     </div>
-    </div>
-
-    <div class="total">
-     <p class="total-mo-yr">Total(per month)</p>
-     <p class="total-amount">$12/mo</p>
-    </div>
-    
-
-   </div>
-
-
-
-   <!--NEXT AND PREV BUTTON-->
-   <div class="nxt-btn">
-    <button class="btn prev-btn">Go Back</button>
-    <button class="btn next-btn">Next Step</button>
-   </div>
-   
   </div>
- </div>
- <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

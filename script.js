@@ -233,7 +233,7 @@ change.addEventListener('click', e => {
 
   // CHANGING OF FINISH UP PLAN
     finishMonth.classList.toggle('active-finish');
-    // finishYear.classList.toggle('active-finish');
+    finishYear.classList.toggle('active-finish');
 
 })
 
